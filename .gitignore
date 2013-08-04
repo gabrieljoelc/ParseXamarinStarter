@@ -37,6 +37,13 @@ x64/
 *.vssscc
 .builds
 
+#Xamarin
+*.pidb
+*.userprefs
+*.swp
+*.DS_Store
+*.nib
+
 # Visual C++ cache files
 ipch/
 *.aps
