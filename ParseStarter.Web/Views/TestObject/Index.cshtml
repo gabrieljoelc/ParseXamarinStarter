@@ -1,0 +1,45 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "TestObject Parse List";
+}
+
+<h2>TestObject Parse List</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>ObjectId</th>
+        <th>CreatedAt</th>
+        <th>UpdatedAt</th>
+        <th>Properties</th>
+    </tr>
+
+@foreach (dynamic item in Model) {
+    <tr>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+        <td>
+            @item.ObjectId
+        </td>
+        <td>
+            @item.CreatedAt
+            </td>
+        <td>
+            @item.UpdatedAt
+            </td>
+        <td>
+            @foreach (var keyValue in item.Properties)
+            {
+                @keyValue.Key@:, @keyValue.Value ;
+            }
+            </td>
+    </tr>
+}
+
+</table>
