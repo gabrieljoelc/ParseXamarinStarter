@@ -12,7 +12,7 @@ namespace ParseStarter.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Foo", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "TestObject", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
